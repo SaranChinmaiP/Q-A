@@ -27,8 +27,10 @@ Output: 10980
   Constraints:
   2<=n<=1000
 
-  Input: 3 <br/>
-  Output : -20 20 
+  Input:
+  3
+  Output :
+  -20 20
   </code>
 ```
 import java.util.*;
