@@ -144,3 +144,119 @@ class Main
 }
 ```
 
+# 5: Oxygen Value
+
+The selection of MPCS exams includes a fitness test which is conducted on the ground. There will be a batch of 3 trainees, appearing for a running test on track for 3 rounds.
+
+You need to record their oxygen level after every round. After trainees are finished with all rounds, calculate for each trainee his average oxygen level over the 3 rounds and select the one with the highest average oxygen level as the fittest trainee. If more than one trainee attains the same highest average level, they all need to be selected. Display the fittest trainee(or trainers) and the highest average oxygen level.
+
+Note:
+
+1. The oxygen value entered should not be accepted if it is not in the range between 1 and 100.
+2. If the calculated maximum average oxygen value of the trainees is below 70 then declare the 
+   trainees as unfit with a meaningful message as “All       trainees are unfit”
+3. Average oxygen values should be rounded
+
+<code>
+	Example 1:
+Input #1:
+
+95
+92
+95
+92
+90
+92
+90
+92
+90
+
+Output:
+
+Trainee Number: 1
+
+Trainee Number: 3
+
+Note: Input should be 9 integer values representing oxygen levels entered in order as 
+
+Round 1: 
+
+Oxygen value of trainee 1
+
+Oxygen value of trainee 2
+
+Oxygen value of trainee 3
+
+Round 2:
+
+Oxygen value of trainee 1
+
+Oxygen value of trainee 2 
+
+Oxygen value of trainee 3
+
+Round 3:
+
+Oxygen value of trainee 1
+
+Oxygen value of trainee 2
+
+Oxygen value of trainee 3
+
+Note :Oxygen must be in the given format as in the above example. For any wrong input, the final output should display “INVALID INPUT”
+	</code>
+```
+mport java.util.*;
+class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int i, x, T1 = 0, T2 = 0, T3 = 0, count = 1;
+	    double A1, A2, A3;
+	    while(count<=9)
+	    {
+	    	x=sc.nextInt();
+	    	if(x >= 1 && x <= 100)
+	        {
+	            if(count % 3 == 1)
+	            {
+	                T1 = T1 + x;   
+	            }
+	            else if(count % 3 == 2)
+	            {
+	                T2 = T2 + x;
+	            }
+	            else
+	            {
+	                T3 = T3 + x;
+	            }
+	            count++;
+	        }
+	    	else
+	    	{
+	    		System.out.println("INVALID INPUT");
+	    		count++;
+	    		return;
+	    	}
+	    }
+	    A1 = Math.round(T1/3);
+	    A2 = Math.round(T2/3);
+	    A3 = Math.round(T3/3);
+	    if(A1 <= 70 && A2 <= 70 && A3 <= 70)
+	    {
+	        System.out.println("All trainees are unfit");
+	        return;
+	    }
+	    if(A1 >= A2 && A1>= A3)
+	    	System.out.println("Trainee Number: 1");
+	    if(A2 >= A1 && A2 >= A3)
+	    	System.out.println("Trainee Number: 2");
+	    if(A3 >= A1 && A3 >= A2)
+	    	System.out.println("Trainee Number: 3");
+	    return;
+	}
+}
+```
+
+
