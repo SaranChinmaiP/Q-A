@@ -109,3 +109,38 @@ class Main
 }
 ```
 
+# 4: Jar of Candies
+
+Write the code to implement the above scenario. Display JAR at the counter with the available number of candies.
+
+```
+Input #1:
+3
+Output :
+
+Number of Candies Sold: 3
+Number of Candies available:7
+```
+```
+import java.util.*;
+class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int n=10,k = sc.nextInt();
+		if(k==0)
+		{
+			System.out.println("INVALID INPUT");
+			System.out.println("NUMBER OF CANDIES AVAILABLE: "+n);
+		}
+		else
+		{
+			System.out.println("NUMBER OF CANDIES SOLD: "+k);
+			System.out.println("NUMBER OF CANDIES AVAILABLE: "+(n-k));
+		}
+		sc.close();
+	}
+}
+```
+
