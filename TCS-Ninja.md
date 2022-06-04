@@ -14,7 +14,7 @@ print(int(num,17))
 Output: 10980
 ```
 
-#2. A Sober Walk
+# 2. A Sober Walk
 
 - He first turns and travels 10 units of distance
 - His second turn is upward for 20 units
