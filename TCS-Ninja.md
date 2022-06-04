@@ -69,4 +69,14 @@ class Main {
 }
 ```
 
+# 3. Word is the key
+One programming language has the following keywords that cannot be used as identifiers:
+Write a program to find if the given word is a keyword or not
+<code>Input #1:
+defer
+	
+  Output:
+defer is a keyword
+	</code>
+
 
