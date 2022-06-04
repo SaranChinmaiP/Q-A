@@ -28,6 +28,7 @@ Output: 10980
   2<=n<=1000
 
   Input: 3 
+	
   Output : -20 20 
   </code>
 ```
